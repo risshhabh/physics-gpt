@@ -11,7 +11,6 @@ export default function Auth() {
     
     const { user, login, signup, signInWithGoogle, resetPassword } = useAuth();
 
-    // Redirect if already logged in
     if (user) {
         return <Navigate to="/new" />;
     }
