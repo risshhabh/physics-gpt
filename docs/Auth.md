@@ -1,8 +1,9 @@
+# Authentication
+
+This file provides documentation for the authentication system used in the application. It covers the usage of Firebase Authentication and the `AuthContext` file.
 
 
 # `AuthContext` Documentation
-
-This file defines and provides an authentication context for a React application using Firebase Authentication. It allows components throughout the app to access and interact with authentication functionality via a shared context.
 
 ## Overview
 
