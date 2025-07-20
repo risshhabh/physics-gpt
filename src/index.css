@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --font-mono: "Space Mono", monospace;
+    --font-sans: "Inter", sans-serif;
+    --color-bg: #1a1a1a;
+    --color-bg-secondary: #2d2d2d;
+    --color-text: #ffffff;
+    --color-accent: #ff4081;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-shadow: rgba(0, 0, 0, 0.5);
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--color-text);
 }
