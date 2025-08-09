@@ -3,6 +3,9 @@ import { AuthProvider } from "./AuthContext";
 import { useAuth } from "./hooks/useAuth";
 import "./index.css";
 
+// LaTeX rendering using KaTeX
+import 'katex/dist/katex.min.css';
+
 // pages
 import Auth from "./pages/Auth";
 import NewChat from "./pages/NewChat";
@@ -37,7 +40,7 @@ function AppRoutes() {
                         <NewChat />
                     </ProtectedRoute>
                 } />
-                <Route path="/chat/:id" element={
+                <Route path="/chat" element={
                     <ProtectedRoute>
                         <Chat />
                     </ProtectedRoute>
