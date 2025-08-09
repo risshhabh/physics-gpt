@@ -1,0 +1,78 @@
+.chat-bubble {
+    padding: 16px 20px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    max-width: 75%;
+    backdrop-filter: blur(0.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* SHIMMER EFFECT FROM LEFT TO RIGHT ON HOVER */
+/* .chat-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.5s ease;
+} */
+
+.chat-bubble:hover::before {
+    left: 100%;
+}
+
+.chat-bubble:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chat-bubble p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    white-space: pre-wrap;
+}
+
+.chat-bubble.user {
+    background: linear-gradient(135deg, rgba(123, 201, 111, 0.3) 0%, rgba(107, 184, 95, 0.2) 100%);
+    border-color: rgba(123, 201, 111, 0.3);
+    align-self: flex-end;
+    margin-left: auto;
+    border-radius: 18px 18px 4px 18px;
+}
+
+.chat-bubble.user:hover {
+    background: linear-gradient(135deg, rgba(123, 201, 111, 0.4) 0%, rgba(107, 184, 95, 0.3) 100%);
+    border-color: rgba(123, 201, 111, 0.4);
+    box-shadow: 0 6px 20px rgba(123, 201, 111, 0.2);
+}
+
+.chat-bubble.assistant {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-color: rgba(255, 255, 255, 0.15);
+    align-self: flex-start;
+    margin-right: auto;
+    border-radius: 18px 18px 18px 4px;
+}
+
+.chat-bubble.assistant:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-bubble.assistant p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.chat-bubble.user p {
+    color: #ffffff;
+    font-weight: 500;
+}
