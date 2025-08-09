@@ -1,5 +1,6 @@
 // import { useAuth } from "../hooks/useAuth"; // UNCOMMENT AFTER TESTING AUTHENTICATION
 import InputBox from "../components/InputBox";
+import "./NewChat.css";
 
 export default function NewChat() {
 
@@ -20,7 +21,6 @@ export default function NewChat() {
 
     return (
         <>
-            <h1>New Chat</h1>
             <InputBox />
         </>
     );
