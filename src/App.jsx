@@ -13,6 +13,9 @@ import ScrollToTop from "./components/ScrollToTop";
 
 // ensure the user cannot navigate to unwanted pages if not logged in
 function ProtectedRoute({ children }) {
+
+    // DEV: COMMENTED OUT THE FOLLOWING TO ALLOW NAVIGATION WHILE NOT LOGGED IN
+
     // const { user } = useAuth();
     
     // if (!user) return <Navigate to="/auth" />;
