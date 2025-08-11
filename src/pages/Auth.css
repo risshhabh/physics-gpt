@@ -31,6 +31,7 @@
 #auth-logo {
     width: clamp(4rem, 12vw, 6rem);
     height: auto;
+    border-radius: 100%;
     margin-bottom: clamp(1rem, 3vw, 1.5rem);
     filter: drop-shadow(0 0.25rem 0.5rem rgba(0, 0, 0, 0.3));
     transition: filter 0.3s ease;
@@ -44,6 +45,20 @@
     color: #ffffff;
     text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
     letter-spacing: -0.02em;
+}
+
+.error-message {
+    width: 100%;
+    padding: clamp(0.75rem, 3vw, 1rem);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: clamp(0.5rem, 2vw, 0.75rem);
+    color: #fecaca;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    text-align: center;
+    backdrop-filter: blur(0.5rem);
+    animation: fadeInUp 0.3s ease-out;
 }
 
 .input-div {
@@ -79,6 +94,11 @@
         inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1),
         0 0 0 2px rgba(255, 255, 255, 0.1);
     transform: translateY(-0.0625rem);
+}
+
+.input-field:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .password-input {
@@ -135,6 +155,20 @@
     transform: translateY(0);
     box-shadow: 
         0 0.125rem 0.5rem rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.auth-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-button:disabled:hover {
+    transform: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    box-shadow: 
+        0 0.25rem 0.75rem rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
