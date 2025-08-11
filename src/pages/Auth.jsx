@@ -4,7 +4,6 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Eye, EyeOff } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
 import "/src/pages/Auth.css";
 
@@ -15,8 +14,6 @@ export default function Auth() {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const [isSignUp, setIsSignUp] = useState(false);
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     
     const { login, signup, signInWithGoogle } = useAuth();
     const navigate = useNavigate();
@@ -133,46 +130,26 @@ export default function Auth() {
                     />
                 </div>
                 <div className="password-input input-div">
-                    <div className="password-input-wrapper">
-                        <input 
-                            type={showPassword ? "text" : "password"}
-                            className="input-field" 
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            disabled={loading}
-                        />
-                        <button 
-                            type="button"
-                            className="password-toggle-button"
-                            onClick={() => setShowPassword(!showPassword)}
-                            disabled={loading}
-                        >
-                            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                        </button>
-                    </div>
+                    <input 
+                        type="password" 
+                        className="input-field" 
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        disabled={loading}
+                    />
                 </div>
                 
                 {isSignUp && (
                     <div className="password-input input-div">
-                        <div className="password-input-wrapper">
-                            <input 
-                                type={showConfirmPassword ? "text" : "password"}
-                                className="input-field" 
-                                placeholder="Confirm Password"
-                                value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                disabled={loading}
-                            />
-                            <button 
-                                type="button"
-                                className="password-toggle-button"
-                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                disabled={loading}
-                            >
-                                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                            </button>
-                        </div>
+                        <input 
+                            type="password" 
+                            className="input-field" 
+                            placeholder="Confirm Password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            disabled={loading}
+                        />
                     </div>
                 )}
 
